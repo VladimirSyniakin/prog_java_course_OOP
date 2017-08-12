@@ -1,6 +1,6 @@
-package com.gmail.vsyniakin;
+package com.gmail.vsyniakin.task2;
 
-public class SingleThreadSum implements Runnable {
+public class SumSingleThread implements Runnable {
 
 	private int[] array;
 	private int lowIndex;
@@ -8,21 +8,16 @@ public class SingleThreadSum implements Runnable {
 	private Thread thr;
 	private long result = 0L;
 	
-	public SingleThreadSum() {
+	public SumSingleThread() {
 		super();
 	}
-	public SingleThreadSum(int[] array, int lowIndex, int hightIndex) {
+	public SumSingleThread(int[] array, int lowIndex, int hightIndex) {
 		super();
 		this.array = array;
 		this.lowIndex = lowIndex;
 		this.hightIndex = hightIndex;
 		thr = new Thread(this);
 		thr.start();
-		try {
-			thr.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Override

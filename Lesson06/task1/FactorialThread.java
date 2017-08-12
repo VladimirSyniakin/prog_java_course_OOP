@@ -1,4 +1,4 @@
-package com.gmail.vsyniakin;
+package com.gmail.vsyniakin.task1;
 
 import java.math.BigInteger;
 
@@ -20,7 +20,7 @@ public class FactorialThread implements Runnable {
 		System.out.println(factorianInThread(numberThread));
 	}
 
-	public BigInteger factorianInThread(int i) {
+	private BigInteger factorianInThread(int i) {
 		BigInteger result = new BigInteger("" + i);
 		if (i != 0) {
 			for (int j = (i-1); j > 0; j--) {
